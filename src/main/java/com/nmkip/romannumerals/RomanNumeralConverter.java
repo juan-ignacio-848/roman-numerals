@@ -18,15 +18,15 @@ public class RomanNumeralConverter {
                 new Numeral("I", 1)
     };
 
-    public int toArabic(String roman) {
+    public int toArabic(String fromRoman) {
         int arabic = 0;
         for (Numeral knownNumeral : knownNumerals) {
-                while (roman.length() > 0) {
-                    if (!roman.startsWith(knownNumeral.getRoman())) {
+                while (fromRoman.length() > 0) {
+                    if (!fromRoman.startsWith(knownNumeral.getRoman())) {
                         break;
                     }
                     arabic += knownNumeral.getArabic();
-                    roman = removeConsumedNumeralFrom(roman, knownNumeral.getRoman());
+                    fromRoman = removeConsumedNumeralFrom(fromRoman, knownNumeral.getRoman());
                 }
         }
 

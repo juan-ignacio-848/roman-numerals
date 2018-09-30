@@ -17,7 +17,10 @@ public class RomanToArabicTest {
                 "III, 3",
                 "IV, 4",
                 "V, 5",
-                "MCMLXIX, 1969"
+                "MCMLXIX, 1969",
+                "MCMLXXIII, 1973",
+                "MCMLXXVIII, 1978",
+                "MMXXXVIII, 2038"
                 })
     public void convert(String roman, int arabic) {
         RomanNumeralConverter converter = new RomanNumeralConverter();
