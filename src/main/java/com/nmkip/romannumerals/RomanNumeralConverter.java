@@ -26,14 +26,14 @@ public class RomanNumeralConverter {
                         break;
                     }
                     arabic += knownNumeral.getArabic();
-                    fromRoman = removeConsumedNumeralFrom(fromRoman, knownNumeral.getRoman());
+                    fromRoman = removeConsumed(fromRoman, knownNumeral.getRoman());
                 }
         }
 
         return  arabic;
     }
 
-    private String removeConsumedNumeralFrom(String romanNumeral, String consumed) {
+    private String removeConsumed(String romanNumeral, String consumed) {
         return romanNumeral.substring(consumed.length());
     }
 
