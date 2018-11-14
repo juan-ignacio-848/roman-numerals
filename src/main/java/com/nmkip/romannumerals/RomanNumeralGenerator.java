@@ -20,6 +20,7 @@ public class RomanNumeralGenerator {
 
         TEN("X", 10),
         FIVE("V", 5),
+        FOUR("IV", 4),
         ONE("I", 1);
 
         private final int decimal;
