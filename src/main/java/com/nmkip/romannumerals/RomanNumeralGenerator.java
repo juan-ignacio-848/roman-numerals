@@ -6,14 +6,11 @@ public class RomanNumeralGenerator {
 
         String roman = "";
 
-        if(decimal >= 10) {
-            roman += "X";
-            decimal -= 10;
-        }
-
-        if(decimal >= 5) {
-            roman += "V";
-            decimal -= 5;
+        for(RomanArabic romanArabic : RomanArabic.values()) {
+            if(decimal >= romanArabic.decimal) {
+                roman += romanArabic.roman;
+                decimal -= romanArabic.decimal;
+            }
         }
 
         for(int i = 0; i < decimal; i++) {
@@ -21,5 +18,19 @@ public class RomanNumeralGenerator {
         }
 
         return roman;
+    }
+
+    private enum RomanArabic {
+
+        TEN("X", 10),
+        FIVE("V", 5);
+
+        private final int decimal;
+        private final String roman;
+
+        RomanArabic(String roman, int decimal) {
+            this.roman = roman;
+            this.decimal = decimal;
+        }
     }
 }
