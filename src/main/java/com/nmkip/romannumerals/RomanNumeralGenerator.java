@@ -19,6 +19,7 @@ public class RomanNumeralGenerator {
     private enum RomanArabic {
 
         TEN("X", 10),
+        NINE("IX", 9),
         FIVE("V", 5),
         FOUR("IV", 4),
         ONE("I", 1);
