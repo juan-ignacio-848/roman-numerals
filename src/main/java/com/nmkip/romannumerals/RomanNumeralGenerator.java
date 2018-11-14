@@ -1,0 +1,8 @@
+package com.nmkip.romannumerals;
+
+public class RomanNumeralGenerator {
+
+    public static String romanFor(int decimal) {
+        return "I";
+    }
+}
