@@ -16,7 +16,9 @@ public class RomanNumeralGeneratorShould {
     @CsvSource({
             "1, I",
             "2, II",
-            "3, III"
+            "3, III",
+            "5, V",
+            "6, VI",
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
