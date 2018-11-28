@@ -22,6 +22,7 @@ public class RomanNumeralGenerator {
         FIFTY("L", 50),
         TEN("X", 10),
         FIVE("V", 5),
+        FOUR("IV", 4),
         ONE("I", 1);
 
         private String roman;
