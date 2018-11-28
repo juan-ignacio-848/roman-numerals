@@ -27,7 +27,11 @@ public class RomanNumeralGeneratorShould {
             "11, XI",
             "15, XV",
             "20, XX",
-            "60, LX"
+            "40, XL",
+            "60, LX",
+            "90, XC",
+            "400, CD",
+            "900, CM"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
