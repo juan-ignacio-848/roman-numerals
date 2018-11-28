@@ -21,6 +21,7 @@ public class RomanNumeralGenerator {
         ONE_HUNDRED("C", 100),
         FIFTY("L", 50),
         TEN("X", 10),
+        NINE("IX", 9),
         FIVE("V", 5),
         FOUR("IV", 4),
         ONE("I", 1);
