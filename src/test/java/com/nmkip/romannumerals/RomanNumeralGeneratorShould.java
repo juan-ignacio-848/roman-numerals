@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.nmkip.romannumerals.RomanNumeralGenerator.*;
+import static com.nmkip.romannumerals.RomanNumeralGenerator.romanFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -20,7 +20,10 @@ public class RomanNumeralGeneratorShould {
             "5, V",
             "6, VI",
             "7, VII",
-            "8, VIII"
+            "8, VIII",
+            "10, X",
+            "11, XI",
+            "15, XV"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
