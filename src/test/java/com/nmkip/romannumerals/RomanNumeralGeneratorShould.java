@@ -19,6 +19,8 @@ public class RomanNumeralGeneratorShould {
             "3, III",
             "5, V",
             "6, VI",
+            "7, VII",
+            "8, VIII"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
