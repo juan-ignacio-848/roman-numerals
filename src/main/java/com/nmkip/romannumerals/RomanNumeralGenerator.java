@@ -16,6 +16,10 @@ public class RomanNumeralGenerator {
     }
 
     private enum RomanDecimal {
+        THOUSAND("M", 1000),
+        FIVE_HUNDRED("D", 500),
+        ONE_HUNDRED("C", 100),
+        FIFTY("L", 50),
         TEN("X", 10),
         FIVE("V", 5),
         ONE("I", 1);

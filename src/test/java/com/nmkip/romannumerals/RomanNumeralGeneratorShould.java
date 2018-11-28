@@ -24,7 +24,8 @@ public class RomanNumeralGeneratorShould {
             "10, X",
             "11, XI",
             "15, XV",
-            "20, XX"
+            "20, XX",
+            "60, LX"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
