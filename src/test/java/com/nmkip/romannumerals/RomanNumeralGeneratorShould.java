@@ -31,7 +31,11 @@ public class RomanNumeralGeneratorShould {
             "60, LX",
             "90, XC",
             "400, CD",
-            "900, CM"
+            "900, CM",
+            "234, CCXXXIV",
+            "344, CCCXLIV",
+            "999, CMXCIX",
+            "3999, MMMCMXCIX"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
