@@ -23,7 +23,8 @@ public class RomanNumeralGeneratorShould {
             "8, VIII",
             "10, X",
             "11, XI",
-            "15, XV"
+            "15, XV",
+            "20, XX"
     })
     public void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {

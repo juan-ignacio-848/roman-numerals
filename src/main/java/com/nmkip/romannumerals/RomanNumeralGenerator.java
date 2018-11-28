@@ -6,7 +6,7 @@ public class RomanNumeralGenerator {
 
         String roman = "";
         for (RomanDecimal romanDecimal : RomanDecimal.values()) {
-            if (decimal >= romanDecimal.decimal) {
+            while (decimal >= romanDecimal.decimal) {
                 roman += romanDecimal.roman;
                 decimal -= romanDecimal.decimal;
             }
