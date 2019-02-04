@@ -1,26 +1,26 @@
 package com.nmkip.romannumerals;
 
-public class RomanNumeralGenerator {
+class RomanNumeralGenerator {
+    String romanFor(int arabic) {
 
-    public static String romanFor(int decimal) {
+        StringBuilder roman = new StringBuilder();
 
-        String roman = "";
-        for (RomanDecimal romanDecimal : RomanDecimal.values()) {
-            while (decimal >= romanDecimal.decimal) {
-                roman += romanDecimal.roman;
-                decimal -= romanDecimal.decimal;
+        for (RomanArabic romanArabic : RomanArabic.values()) {
+            while (arabic >= romanArabic.arabic) {
+                roman.append(romanArabic.roman);
+                arabic -= romanArabic.arabic;
             }
         }
 
-        return roman;
+        return roman.toString();
     }
 
-    private enum RomanDecimal {
+    enum RomanArabic {
         THOUSAND("M", 1000),
         NINE_HUNDRED("CM", 900),
         FIVE_HUNDRED("D", 500),
         FOUR_HUNDRED("CD", 400),
-        ONE_HUNDRED("C", 100),
+        HUNDRED("C", 100),
         NINETY("XC", 90),
         FIFTY("L", 50),
         FORTY("XL", 40),
@@ -31,12 +31,13 @@ public class RomanNumeralGenerator {
         ONE("I", 1);
 
         private String roman;
-        private int decimal;
+        private int arabic;
 
-        RomanDecimal(String roman, int decimal) {
+        RomanArabic(String roman, int arabic) {
             this.roman = roman;
-            this.decimal = decimal;
+            this.arabic = arabic;
         }
 
     }
 }
+

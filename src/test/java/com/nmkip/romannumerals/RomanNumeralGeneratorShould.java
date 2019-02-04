@@ -4,12 +4,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.nmkip.romannumerals.RomanNumeralGenerator.romanFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@DisplayName("Roman Numeral Generator should")
-public class RomanNumeralGeneratorShould {
+@DisplayName("RomanNumeralGenerator should")
+class RomanNumeralGeneratorShould {
 
     @DisplayName("Generate a roman numeral for a given decimal number")
     @ParameterizedTest(name = "\"{0}\" should be \"{1}\"")
@@ -26,20 +25,24 @@ public class RomanNumeralGeneratorShould {
             "10, X",
             "11, XI",
             "15, XV",
+            "18, XVIII",
+            "18, XVIII",
             "20, XX",
             "40, XL",
-            "60, LX",
+            "50, L",
             "90, XC",
+            "100, C",
             "400, CD",
+            "500, D",
+            "846, DCCCXLVI",
             "900, CM",
-            "234, CCXXXIV",
-            "344, CCCXLIV",
-            "999, CMXCIX",
-            "3999, MMMCMXCIX"
+            "1000, M",
+            "1999, MCMXCIX",
     })
-    public void
+    void
     generate_roman_numeral_for_a_given_decimal_number(int decimal, String roman) {
-        assertThat(romanFor(decimal)).isEqualTo(roman);
+        RomanNumeralGenerator romanNumeralGenerator = new RomanNumeralGenerator();
+        assertThat(romanNumeralGenerator.romanFor(decimal)).isEqualTo(roman);
     }
 
 
